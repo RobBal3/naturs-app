@@ -1,0 +1,43 @@
+.section-features {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.6),
+            rgba($color-primary-dark, 0.6)
+        ),
+        url(../img/hero-small.jpg);
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    .feature-box-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+        padding: 20rem 0;
+        transform: skewY(7deg);
+
+        .feature-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            padding: 2.5rem;
+            text-align: center;
+            border-radius: 3px;
+            width: 25rem;
+            height: 30rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &__icon {
+                font-size: 6rem;
+                margin-bottom: 0.5rem;
+                display: inline-block;
+            }
+
+            &:hover {
+                transform: translateY(-1.5rem);
+            }
+        }
+    }
+}
