@@ -59,6 +59,15 @@ body {
         transform: skewY(4deg) skewX(7deg);
         text-shadow: 1px 1px 1px rgba(#333, 0.3);
     }
+
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+
+    @include respond(tab-land) {
+        font-size: 3rem;
+        margin-top: 6rem;
+    }
 }
 
 .heading-tertiary {

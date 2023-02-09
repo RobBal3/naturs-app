@@ -57,6 +57,9 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -117,6 +120,13 @@ body {
   .heading-secondary:hover {
     transform: skewY(4deg) skewX(7deg);
     text-shadow: 1px 1px 1px rgba(51, 51, 51, 0.3); }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 75em) {
+    .heading-secondary {
+      font-size: 3rem;
+      margin-top: 6rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -213,49 +223,6 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-.section-about {
-  margin-top: -20vh;
-  background-color: #e2e2e2;
-  padding-top: 25rem;
-  padding-bottom: 25rem; }
-  .section-about .row {
-    display: flex;
-    justify-content: space-around; }
-    .section-about .row .column-1,
-    .section-about .row .column-2 {
-      width: 40%; }
-    .section-about .row .composition {
-      position: relative; }
-      .section-about .row .composition__photo {
-        position: absolute;
-        border-radius: 1rem;
-        transition: all 0.2s; }
-        .section-about .row .composition__photo:hover {
-          padding: 2rem;
-          border: 1.5rem solid #7ed56f;
-          border-radius: 1rem; }
-      .section-about .row .composition__photo--p1 {
-        top: -2rem;
-        left: 0rem;
-        z-index: 1; }
-        .section-about .row .composition__photo--p1:hover {
-          z-index: 10;
-          transform: scale(1.1); }
-      .section-about .row .composition__photo--p2 {
-        top: 2rem;
-        right: 0rem;
-        z-index: 1; }
-        .section-about .row .composition__photo--p2:hover {
-          z-index: 20;
-          transform: scale(1.1); }
-      .section-about .row .composition__photo--p3 {
-        left: 20%;
-        top: 10rem;
-        z-index: 1; }
-        .section-about .row .composition__photo--p3:hover {
-          z-index: 30;
-          transform: scale(1.1); }
-
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
@@ -277,6 +244,11 @@ body {
     gap: 1rem;
     padding: 20rem 0;
     transform: skewY(7deg); }
+    @media only screen and (max-width: 56.25em) {
+      .section-features .feature-box-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
     .section-features .feature-box-wrapper .feature-box {
       background-color: rgba(255, 255, 255, 0.8);
       font-size: 1.5rem;
@@ -288,6 +260,9 @@ body {
       border-radius: 1rem;
       cursor: pointer;
       transition: all 0.3s; }
+      @media only screen and (max-width: 56.25em) {
+        .section-features .feature-box-wrapper .feature-box {
+          width: 80%; } }
       .section-features .feature-box-wrapper .feature-box__icon {
         font-size: 6rem;
         margin-bottom: 0.5rem;
@@ -303,27 +278,55 @@ body {
   .section-about .row {
     display: flex;
     justify-content: space-around; }
+    @media only screen and (max-width: 37.5em) {
+      .section-about .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10rem; } }
     .section-about .row .column-1,
     .section-about .row .column-2 {
-      width: 40%; }
+      width: 45%; }
+      @media only screen and (max-width: 37.5em) {
+        .section-about .row .column-1,
+        .section-about .row .column-2 {
+          width: 60%;
+          margin-bottom: 8rem; } }
     .section-about .row .composition {
       position: relative; }
       .section-about .row .composition__photo {
+        width: 55%;
         position: absolute;
         border-radius: 1rem;
-        transition: all 0.2s;
+        transition: all 0.5s;
         z-index: 10px;
-        outline-offset: 2rem; }
+        outline-offset: 1.5rem; }
+        @media only screen and (max-width: 37.5em) {
+          .section-about .row .composition__photo {
+            width: 40%; } }
         .section-about .row .composition__photo:hover {
-          outline: 1.5rem;
-          border-radius: 1rem;
-          transform: scale(1.05) translateY(-0.5rem); }
-      .section-about .row .composition__photo--p1 {
-        top: -2rem;
-        left: 0; }
-      .section-about .row .composition__photo--p2 {
-        top: 2rem;
-        right: 0; }
-      .section-about .row .composition__photo--p3 {
-        left: 20%;
-        top: 10rem; }
+          z-index: 50;
+          outline: solid 1.4rem #28b485;
+          transform: scale(1.1) translateY(-1rem); }
+        .section-about .row .composition__photo--p1 {
+          top: -2rem;
+          left: 0; }
+          @media only screen and (max-width: 37.5em) {
+            .section-about .row .composition__photo--p1 {
+              top: 0;
+              left: 0; } }
+        .section-about .row .composition__photo--p2 {
+          right: 0;
+          top: 2rem; }
+          @media only screen and (max-width: 37.5em) {
+            .section-about .row .composition__photo--p2 {
+              top: -2rem;
+              left: 18rem;
+              z-index: 10; } }
+        .section-about .row .composition__photo--p3 {
+          left: 20%;
+          top: 10rem; }
+          @media only screen and (max-width: 37.5em) {
+            .section-about .row .composition__photo--p3 {
+              top: 0;
+              left: 38rem; } }

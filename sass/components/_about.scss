@@ -8,42 +8,74 @@
         display: flex;
         justify-content: space-around;
 
+        @include respond(phone) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10rem;
+        }
+
         .column-1,
         .column-2 {
-            width: 40%;
+            width: 45%;
+
+            @include respond(phone) {
+                width: 60%;
+                margin-bottom: 8rem;
+            }
         }
 
         .composition {
             position: relative;
 
             &__photo {
+                width: 55%;
                 position: absolute;
                 border-radius: 1rem;
-                transition: all 0.2s;
+                transition: all 0.5s;
                 z-index: 10px;
-                outline-offset: 2rem;
+                outline-offset: 1.5rem;
+
+                @include respond(phone) {
+                    width: 40%;
+                }
 
                 &:hover {
-                    outline: 1.5rem;
-                    // border: 1.5rem solid $color-primary-light;
-                    border-radius: 1rem;
-                    transform: scale(1.05) translateY(-0.5rem);
+                    z-index: 50;
+                    outline: solid 1.4rem $color-primary-dark;
+                    transform: scale(1.1) translateY(-1rem);
                 }
-            }
 
-            &__photo--p1 {
-                top: -2rem;
-                left: 0;
-            }
+                &--p1 {
+                    top: -2rem;
+                    left: 0;
 
-            &__photo--p2 {
-                top: 2rem;
-                right: 0;
-            }
+                    @include respond(phone) {
+                        top: 0;
+                        left: 0;
+                    }
+                }
 
-            &__photo--p3 {
-                left: 20%;
-                top: 10rem;
+                &--p2 {
+                    right: 0;
+                    top: 2rem;
+
+                    @include respond(phone) {
+                        top: -2rem;
+                        left: 18rem;
+                        z-index: 10;
+                    }
+                }
+
+                &--p3 {
+                    left: 20%;
+                    top: 10rem;
+
+                    @include respond(phone) {
+                        top: 0;
+                        left: 38rem;
+                    }
+                }
             }
         }
     }

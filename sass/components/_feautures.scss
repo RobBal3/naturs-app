@@ -17,6 +17,12 @@
         padding: 20rem 0;
         transform: skewY(7deg);
 
+        @include respond(tab-port) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .feature-box {
             background-color: rgba(255, 255, 255, 0.8);
             font-size: 1.5rem;
@@ -28,6 +34,10 @@
             border-radius: 1rem;
             cursor: pointer;
             transition: all 0.3s;
+
+            @include respond(tab-port) {
+                width: 80%;
+            }
 
             &__icon {
                 font-size: 6rem;
