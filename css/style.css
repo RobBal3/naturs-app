@@ -309,7 +309,7 @@ body {
           outline: solid 1.4rem #28b485;
           transform: scale(1.1) translateY(-1rem); }
         .section-about .row .composition__photo--p1 {
-          top: -2rem;
+          top: 0;
           left: 0; }
           @media only screen and (max-width: 37.5em) {
             .section-about .row .composition__photo--p1 {
@@ -320,8 +320,8 @@ body {
           top: 2rem; }
           @media only screen and (max-width: 37.5em) {
             .section-about .row .composition__photo--p2 {
-              top: -2rem;
-              left: 18rem;
+              top: -1rem;
+              left: 35%;
               z-index: 10; } }
         .section-about .row .composition__photo--p3 {
           left: 20%;
@@ -329,4 +329,4 @@ body {
           @media only screen and (max-width: 37.5em) {
             .section-about .row .composition__photo--p3 {
               top: 0;
-              left: 38rem; } }
+              left: 70%; } }

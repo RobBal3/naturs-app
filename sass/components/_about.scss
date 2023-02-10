@@ -47,7 +47,7 @@
                 }
 
                 &--p1 {
-                    top: -2rem;
+                    top: 0;
                     left: 0;
 
                     @include respond(phone) {
@@ -61,8 +61,8 @@
                     top: 2rem;
 
                     @include respond(phone) {
-                        top: -2rem;
-                        left: 18rem;
+                        top: -1rem;
+                        left: 35%;
                         z-index: 10;
                     }
                 }
@@ -73,7 +73,8 @@
 
                     @include respond(phone) {
                         top: 0;
-                        left: 38rem;
+                        // left: 38rem;
+                        left: 70%;
                     }
                 }
             }
